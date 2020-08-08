@@ -30,6 +30,7 @@ jobs:
       uses: SCHTAMP/mikero-install@v1
       with:
         path: src
+        build-path: ./dist
         
     - uses: actions/upload-artifact@v2
       with:
