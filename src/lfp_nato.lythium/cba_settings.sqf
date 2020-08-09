@@ -383,7 +383,7 @@ force force ace_frag_maxTrackPerFrame = 0;
 force force ace_frag_reflectionsEnabled = false;
 force force ace_frag_spallEnabled = false;
 
-// ACE Слух
+// ACE Слух очка
 force force ace_hearing_autoAddEarplugsToUnits = true;
 force force ace_hearing_disableEarRinging = true;
 force force ace_hearing_earplugsVolume = 0.4;
@@ -396,7 +396,7 @@ ace_vehicles_hideEjectAction = false;
 force force ace_vehicles_keepEngineRunning = true;
 ace_vehicles_speedLimiterStep = 5;
 
-// ACE Указание пальцем
+// ACE Указание писькой
 force force ace_finger_enabled = true;
 ace_finger_indicatorColor = [0.83,0.68,0.21,0.75];
 ace_finger_indicatorForSelf = true;
