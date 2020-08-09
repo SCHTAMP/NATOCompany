@@ -288,11 +288,11 @@ ace_goggles_showClearGlasses = false;
 ace_goggles_showInThirdPerson = false;
 
 // ACE ПНВ
-force force ace_nightvision_aimDownSightsBlur = 0.6;
+force force ace_nightvision_aimDownSightsBlur = 0.5;
 force force ace_nightvision_disableNVGsWithSights = false;
-force force ace_nightvision_effectScaling = 0.7;
-force force ace_nightvision_fogScaling = 1;
-force force ace_nightvision_noiseScaling = 0.7;
+force force ace_nightvision_effectScaling = 0.4;
+force force ace_nightvision_fogScaling = 0.7;
+force force ace_nightvision_noiseScaling = 0.5;
 force force ace_nightvision_shutterEffects = true;
 
 // ACE Перегрев
