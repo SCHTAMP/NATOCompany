@@ -11,14 +11,14 @@ respawnOnStart = -1;
 disabledAI = 1;
 
 //Discord info
-/* class CfgDiscordRichPresence {
-    applicationID="701911038626627664";             // Provided by discord
-    defaultDetails="May the Force be with you!";            // Upper text
-    defaultState="discord.io/lastwar";              // Lower text
-    defaultLargeImageKey="sfrp";      // Large image
-    defaultLargeImageText="Arma 3 Last War RP";     // Large image hover text
+class CfgDiscordRichPresence {
+    applicationID="613784598492610561";             // Provided by discord
+    defaultDetails="Explorer the war";            // Upper text
+    defaultState="discord.io/NATOCompany";              // Lower text
+    defaultLargeImageKey="nato";      // Large image
+    defaultLargeImageText="Arma 3 NATO Company";     // Large image hover text
     defaultSmallImageKey="arma3";      // Small image
     defaultSmallImageText="Arma 3";     // Small image hover text
     useTimeElapsed=1;                       // Show time elapsed since the player connected (1 - true, 0 - false)
-}; */
+};
 
