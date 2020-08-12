@@ -290,7 +290,7 @@ ace_goggles_showInThirdPerson = false;
 // ACE ПНВ
 force ace_nightvision_aimDownSightsBlur = 0;
 force ace_nightvision_disableNVGsWithSights = false;
-force ace_nightvision_effectScaling = 0.5;
+force ace_nightvision_effectScaling = 0.0;
 force ace_nightvision_fogScaling = 0;
 force ace_nightvision_noiseScaling = 0.2;
 force ace_nightvision_shutterEffects = true;
