@@ -8,7 +8,7 @@ class EditorData
 	toggles=1569;
 	class ItemIDProvider
 	{
-		nextID=1338;
+		nextID=1343;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12289.577,41.253304,2001.1595};
-		dir[]={-0.88347822,-0.42131263,-0.20547473};
-		up[]={-0.41057074,0.906793,-0.095484003};
-		aside[]={-0.22655134,8.9762034e-007,0.97409123};
+		pos[]={12340.144,79.918556,2009.6675};
+		dir[]={-0.48261857,-0.31971869,-0.81554323};
+		up[]={-0.16295402,0.94740719,-0.27535334};
+		aside[]={-0.86067694,-1.1829688e-006,0.50933099};
 	};
 };
 binarizationWanted=0;
@@ -19941,7 +19941,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=676;
+		items=679;
 		class Item0
 		{
 			dataType="Marker";
@@ -22524,6 +22524,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="ace_repair_editorLoadedWheels";
+					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
@@ -22854,25 +22873,6 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="ace_repair_editorLoadedWheels";
-					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
-						};
-					};
-				};
 				nAttributes=2;
 			};
 		};
@@ -22899,6 +22899,25 @@ class Mission
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ace_repair_editorLoadedWheels";
+					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
@@ -23370,25 +23389,6 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="ace_repair_editorLoadedWheels";
-					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
-						};
-					};
-				};
 				nAttributes=2;
 			};
 		};
@@ -23414,6 +23414,25 @@ class Mission
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ace_repair_editorLoadedWheels";
+					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
@@ -23798,25 +23817,6 @@ class Mission
 									};
 								};
 							};
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_repair_editorLoadedWheels";
-					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
 						};
 					};
 				};
@@ -25121,6 +25121,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="ace_repair_editorLoadedWheels";
+					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
@@ -25336,25 +25355,6 @@ class Mission
 									};
 								};
 							};
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_repair_editorLoadedWheels";
-					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
 						};
 					};
 				};
@@ -27386,7 +27386,7 @@ class Mission
 			};
 			id=334;
 			type="rhsusf_stryker_m1132_m2_d";
-			atlOffset=-3.8146973e-006;
+			atlOffset=-0.00054168701;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -27902,6 +27902,7 @@ class Mission
 			};
 			id=336;
 			type="rhsusf_stryker_m1126_m2_d";
+			atlOffset=-0.0005645752;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -29225,8 +29226,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -29235,10 +29236,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Barklem";
 								};
 							};
 						};
@@ -29282,8 +29283,8 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -29292,10 +29293,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Barklem";
+									value=0;
 								};
 							};
 						};
@@ -34694,12 +34695,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={12338.011,36.681641,1726.8336};
+				position[]={120000,120081.12,120000};
 				angles[]={0.021991149,0,0.023003438};
 			};
 			id=801;
 			type="tfar_ModuleTaskForceRadioEnforceUsage";
-			atlOffset=0.79269028;
+			atlOffset=120000;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -34843,12 +34844,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={12324.746,36.155777,1723.1813};
-				angles[]={0.025812743,0,0};
+				position[]={120000,120081.12,120000};
+				angles[]={0.025813419,0,0};
 			};
 			id=802;
 			type="tfar_ModuleTaskForceRadioFrequencies";
-			atlOffset=0.2374382;
+			atlOffset=120000;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -69989,6 +69990,7 @@ class Mission
 			};
 			id=1210;
 			type="CUP_B_HMMWV_SOV_USA";
+			atlOffset=-3.8146973e-006;
 		};
 		class Item602
 		{
@@ -70005,6 +70007,7 @@ class Mission
 			};
 			id=1211;
 			type="CUP_B_HMMWV_SOV_USA";
+			atlOffset=-6.8664551e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -70711,7 +70714,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={12327.484,36.076195,1717.344};
+				position[]={12329.853,36.726128,1686.181};
 			};
 			id=1264;
 			type="acex_fortify_setupModule";
@@ -72131,6 +72134,7 @@ class Mission
 			};
 			id=1325;
 			type="rhsusf_mrzr4_d";
+			atlOffset=-0.00037384033;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -72228,6 +72232,143 @@ class Mission
 			id=1337;
 			type="Box_NATO_WpsLaunch_F";
 			atlOffset=0.62499619;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""BWA3_Bunkerfaust_Loaded""],[5]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item676
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12347.487,34.015331,2005.1476};
+				angles[]={0.012109055,3.0543265,-0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1340;
+			type="rhsusf_mrzr4_d";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_g36c_compm4"",""BWA3_Bunkerfaust_Loaded""],[2,2]],[[""rhssaf_30rnd_556x45_EPR_G36"",""rhs_mag_m18_yellow"",""rhsusf_m112x4_mag""],[30,6,6]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_define_mainset";
+					expression="_this setVariable ['rhs_define_mainset', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ODA_MRZR_D";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item677
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12338.561,32.671268,2015.9635};
+				angles[]={-0,6.195919,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1341;
+			type="Box_NATO_Wps_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[""rhsusf_m112x4_mag""],[15]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item678
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12336.96,32.645229,2015.7666};
+				angles[]={-0,3.0717795,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1342;
+			type="Box_NATO_WpsLaunch_F";
+			atlOffset=0.013053894;
 			class CustomAttributes
 			{
 				class Attribute0
