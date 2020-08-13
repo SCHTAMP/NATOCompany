@@ -22,5 +22,7 @@ class Curators
         ,"76561198247446122"//Matria (Event)
         ,"76561199048084127"//Glyba (Event)
 		,"76561198194246470"//Zeus (Event)
+		,"76561198173172722"//Galentine (Event)
+		,"76561198160051880"//Jager (Event)
 	};
 };
