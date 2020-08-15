@@ -23,5 +23,6 @@ class Curators
 		,"76561198194246470"//Zeus (Event)
 		,"76561198173172722"//Galentine (Event)
 		,"76561198160051880"//Jager (Event)
-	};
+	,"76561198328556853"//Nikindor (Event)
+};
 };
