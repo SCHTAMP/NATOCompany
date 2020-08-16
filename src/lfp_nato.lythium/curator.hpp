@@ -12,7 +12,6 @@ class Curators
         ,"76561198168577214"//Wolf   (Event)
         ,"76561199021115878"//Kalters  (Event)
         ,"76561198016076878"//West   (Event)
-        ,"76561198335619075"//Anvil  (Event)
 		,"76561198384407714"//Clever (Event)
         ,"76561198106806701"//Archangel (Event)
         ,"76561198115713057"//Horn   (Event)
