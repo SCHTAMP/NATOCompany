@@ -13,7 +13,7 @@ disabledAI = 1;
 //Discord info
 class CfgDiscordRichPresence {
     applicationID="613784598492610561";             // Provided by discord
-    defaultDetails="Explorer the war";            // Upper text
+    defaultDetails="Explore the war";            // Upper text
     defaultState="discord.io/NATOCompany";              // Lower text
     defaultLargeImageKey="nato";      // Large image
     defaultLargeImageText="Arma 3 NATO Company";     // Large image hover text
