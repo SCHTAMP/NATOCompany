@@ -7,7 +7,7 @@ enableDebugConsole = 1;
 cba_settings_hasSettingsFile = 1;
 respawn = "BASE";
 respawnButton = 1;
-respawnOnStart = -1;
+respawnOnStart = 0;
 disabledAI = 1;
 
 //Discord info
