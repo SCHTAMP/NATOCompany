@@ -10,7 +10,6 @@ class Curators
         ,"76561198054599597"//Olaf (zam_curator)
 		,"76561199028516754"//Desire (Mapper)
         ,"76561198168577214"//Wolf   (Event)
-        ,"76561199021115878"//Kalters  (Event)
         ,"76561198016076878"//West   (Event)
 		,"76561198384407714"//Clever (Event)
         ,"76561198106806701"//Archangel (Event)
