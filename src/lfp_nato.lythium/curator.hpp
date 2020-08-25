@@ -14,7 +14,6 @@ class Curators
 		,"76561198384407714"//Clever (Event)
         ,"76561198106806701"//Archangel (Event)
         ,"76561198115713057"//Horn   (Event)
-		,"76561198001454805"//Darman (Event)
 		,"76561198159515401"//Prus (Event)
         ,"76561198247446122"//Matria (Event)
         ,"76561198044799547"//Glyba (Event)
