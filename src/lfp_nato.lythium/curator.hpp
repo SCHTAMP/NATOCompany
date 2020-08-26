@@ -23,5 +23,6 @@ class Curators
 	    ,"76561198328556853"//Nikindor (Event)
 		,"76561198046918009"//Mahan (Event)
 		,"76561198249001660"//Hornet (Event)
+		,"76561198295847201"//Mosquito (Event)
 };
 };
