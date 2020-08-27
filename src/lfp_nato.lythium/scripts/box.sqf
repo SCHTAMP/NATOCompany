@@ -57,7 +57,7 @@ private _spawn_ammo = {
 	clearBackpackCargoGlobal _obj;
 
 
-}
+};
 
 private _isBusy = {
 	params ["_spawnPoint", ["_sp", [false,""]], ["_near", []]];
