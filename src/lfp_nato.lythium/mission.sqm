@@ -8,7 +8,7 @@ class EditorData
 	toggles=545;
 	class ItemIDProvider
 	{
-		nextID=1449;
+		nextID=1452;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12237.332,43.541061,1794.3109};
-		dir[]={0.84905148,-0.50870752,0.14343569};
-		up[]={0.50172895,0.86083829,0.084768303};
-		aside[]={0.16660067,3.3355318e-006,-0.98613882};
+		pos[]={12239.794,43.118904,1794.8552};
+		dir[]={0.63195723,-0.73358458,0.25046197};
+		up[]={0.68202484,0.67950404,0.27031308};
+		aside[]={0.3684929,1.7732382e-006,-0.92975032};
 	};
 };
 binarizationWanted=0;
@@ -64955,7 +64955,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="call{this disableAI ""All"";" \n "this addAction " \n "[ " \n " ""Spawn Box"", " \n " { " \n "  _this execVM ""scripts\box.sqf""; " \n " }, " \n " [""medic"", 5], " \n " 1.5, " \n " false, " \n " false, " \n " """", " \n " ""true"", " \n " 10, " \n " false, " \n " """", " \n " """" " \n "];}";
+						init="call{this disableAI ""All"";" \n "this addAction " \n "[ " \n " ""Spawn Box"", " \n " { " \n "  _this execVM ""scripts\box.sqf""; " \n " }, " \n " [""medic"", 5], " \n " 1.5, " \n " false, " \n " false, " \n " """", " \n " ""(alive player) && player distance _target < 3 && '[USAF]' in (name player)"", " \n " 10, " \n " false, " \n " """", " \n " """" " \n "];}";
 						ignoreByDynSimulGrid=1;
 						class Inventory
 						{
