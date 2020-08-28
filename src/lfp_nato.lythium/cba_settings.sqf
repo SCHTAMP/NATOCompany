@@ -763,3 +763,52 @@ force usaf_serviceMenu_setting_repairTime = "100";
 force usaf_serviceMenu_setting_replaceSources = false;
 force usaf_serviceMenu_setting_selectorSearchRadius = "15";
 force usaf_utility_core_allow_move_in_cargo = false;
+
+// LAMBS Danger
+force lambs_danger_combatShareRange = 150;
+force lambs_danger_CQB_formations_COLUMN = false;
+force lambs_danger_CQB_formations_DIAMOND = true;
+force lambs_danger_CQB_formations_ECH LEFT = false;
+force lambs_danger_CQB_formations_ECH RIGHT = false;
+force lambs_danger_CQB_formations_FILE = true;
+force lambs_danger_CQB_formations_LINE = false;
+force lambs_danger_CQB_formations_STAG COLUMN = false;
+force lambs_danger_CQB_formations_VEE = false;
+force lambs_danger_CQB_formations_WEDGE = false;
+force lambs_danger_CQB_range = 60;
+force lambs_danger_debug_Drawing = false;
+force lambs_danger_debug_FSM = false;
+force lambs_danger_debug_FSM_civ = false;
+force lambs_danger_debug_functions = false;
+force lambs_danger_disableAIAutonomousManoeuvres = false;
+force lambs_danger_disableAICallouts = false;
+force lambs_danger_disableAIDeployStaticWeapons = false;
+force lambs_danger_disableAIFindStaticWeapons = false;
+force lambs_danger_disableAIFleeing = false;
+force lambs_danger_disableAIGestures = false;
+force lambs_danger_disableAIHideFromTanksAndAircraft = true;
+force lambs_danger_disableAIImediateAction = false;
+force lambs_danger_disableAIPlayerGroup = false;
+force lambs_danger_disableAIPlayerGroupReaction = false;
+force lambs_danger_disableAIPlayerGroupSuppression = false;
+force lambs_danger_disableAutonomousFlares = false;
+force lambs_danger_disableAutonomousSmokeGrenades = false;
+force lambs_danger_maxRevealValue = 0.7;
+force lambs_danger_minFriendlySuppressionDistance = 5;
+force lambs_danger_minSuppression_range = 20;
+force lambs_danger_panic_chance = 5;
+force lambs_danger_radio_backpack = 1500;
+force lambs_danger_radio_disabled = false;
+force lambs_danger_radio_EAST = 200;
+force lambs_danger_radio_GUER = 200;
+force lambs_danger_radio_shout = 30;
+force lambs_danger_radio_WEST = 500;
+force lambs_danger_RenderExpectedDestination = false;
+
+// LAMBS Danger Eventhandlers
+force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
+force lambs_eventhandlers_ExplosionReactionTime = 9;
+
+// LAMBS Danger WP
+force lambs_wp_autoAddArtillery = true;
+
