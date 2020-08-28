@@ -461,10 +461,10 @@ force acex_sitting_enable = true;
 force acex_fortify_settingHint = 1;
 
 // ACEX Headless клиент
-force acex_headless_delay = 0;
+force acex_headless_delay = 10;
 force acex_headless_enabled = true;
 force acex_headless_endMission = 0;
-force acex_headless_log = false;
+force acex_headless_log = true;
 force acex_headless_transferLoadout = 1;
 
 // Achilles - Доступные куратору режимы зрения
