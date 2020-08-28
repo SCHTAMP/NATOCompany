@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8;
+		nextID=9;
 	};
 	class Camera
 	{
-		pos[]={12337.371,110.08536,1687.3};
-		dir[]={-0.069101475,-0.7194609,0.69126683};
-		up[]={-0.071576938,0.69443429,0.71595597};
-		aside[]={0.99515027,1.9481231e-006,0.099485584};
+		pos[]={12332.407,44.79089,1990.2188};
+		dir[]={-0.064289369,-0.70060533,0.71082228};
+		up[]={-0.063121647,0.71344852,0.69782919};
+		aside[]={0.99604487,2.1278393e-006,0.090092808};
 	};
 };
 binarizationWanted=0;
@@ -20788,6 +20788,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="ace_repair_editorLoadedWheels";
+					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
@@ -21118,25 +21137,6 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="ace_repair_editorLoadedWheels";
-					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
-						};
-					};
-				};
 				nAttributes=2;
 			};
 		};
@@ -21163,6 +21163,25 @@ class Mission
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ace_repair_editorLoadedWheels";
+					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
@@ -21634,25 +21653,6 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="ace_repair_editorLoadedWheels";
-					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
-						};
-					};
-				};
 				nAttributes=2;
 			};
 		};
@@ -21678,6 +21678,25 @@ class Mission
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ace_repair_editorLoadedWheels";
+					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
@@ -22065,25 +22084,6 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
-				{
-					property="ace_repair_editorLoadedWheels";
-					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
-						};
-					};
-				};
 				nAttributes=2;
 			};
 		};
@@ -22443,6 +22443,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="ace_repair_editorLoadedWheels";
+					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="VehicleCustomization";
 					expression="if (local _this) then {if (isSimpleObject _this) then {_this setVariable ['bis_fnc_initVehicle_customization',_value]} else {([_this] + _value + [true]) call (uinamespace getvariable 'bis_fnc_initVehicle');};};";
 					class Value
@@ -22658,25 +22677,6 @@ class Mission
 									};
 								};
 							};
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_repair_editorLoadedWheels";
-					expression="_this setVariable ['ace_repair_editorLoadedWheels',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=2;
 						};
 					};
 				};
@@ -24407,8 +24407,8 @@ class Mission
 						};
 						class Attribute1
 						{
-							property="enableStamina";
-							expression="_this enablestamina _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -24417,10 +24417,10 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Barklem";
 								};
 							};
 						};
@@ -24464,8 +24464,8 @@ class Mission
 						};
 						class Attribute4
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="enableStamina";
+							expression="_this enablestamina _value;";
 							class Value
 							{
 								class data
@@ -24474,10 +24474,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"BOOL"
 										};
 									};
-									value="Barklem";
+									value=0;
 								};
 							};
 						};
