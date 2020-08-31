@@ -1,0 +1,440 @@
+#include "infiSTAR_AdminMenu.hpp"
+#include "curator.hpp"
+#include "ACEX_Fortify_Presets.hpp"
+
+
+enableDebugConsole = 1;
+cba_settings_hasSettingsFile = 1;
+respawn = "BASE";
+respawnButton = 0;
+respawnOnStart = 0;
+disabledAI = 1;
+
+//Discord info
+class CfgDiscordRichPresence {
+    applicationID="613784598492610561";             // Provided by discord
+    defaultDetails="Explore the war";            // Upper text
+    defaultState="discord.io/NATOCompany";              // Lower text
+    defaultLargeImageKey="nato";      // Large image
+    defaultLargeImageText="Arma 3 NATO Company";     // Large image hover text
+    defaultSmallImageKey="arma3";      // Small image
+    defaultSmallImageText="Arma 3";     // Small image hover text
+    useTimeElapsed=1;                       // Show time elapsed since the player connected (1 - true, 0 - false)
+};
+
+
+class CfgORBAT
+{
+	class BaseWest
+		{
+			side="West";
+			commander="NATOMen";
+			subordinates[]={};
+		};
+		class B_NATO: BaseWest
+		{
+			text="Блок Объединенных Сил НАТО";
+			textShort="Объединенное командование НАТО";
+			texture="\a3\ui_f\data\map\markers\flags\nato_ca.paa";
+			color[]={1,1,1,1};
+			insignia="\a3\missions_f_epa\data\img\orbat\b_nato_ca.paa";
+			// colorInsignia[]={0,0,0,1};
+			commander="Марлоу";
+			commanderRank="Captain";
+			description="Южный Блок Объединенных сил НАТО — группировка войск, действующая в Средиземноморье, Северной и Центральной Африке, Ближнем Востоке. Состоит из многонационального контингента сводных войск основных стран участниц Североатлантического Альянса. Действует совместно с АУГ, во главе с CVN-76 ""Рональд Рейган"".";
+			subordinates[]=
+			{
+				"B_USAF_HQ",
+				"B_75th_HQ",
+				"B_1st_HQ",
+				"B_UFSF_HQ"
+			};
+
+		 
+		};
+		
+		class B_UFSF_HQ: BaseWest {
+			id=1;
+			idType=0;
+			textShort="UFSF HQ";
+			commander="Klumpen";
+			commanderRank="Lieutenant";
+			text="United Forces Special Force HQ";
+			type="HQ";
+			size="Section";
+			
+			class UFSF_Section : BaseWest {
+				id = 1;
+				type = "Infantry";
+				size = "Platoon";
+				side = "West";
+				commander = "";
+				tags[] = {"BLUFOR", "USArmy","Kerry"};
+				text="United Forces Special Force Section";
+				textShort="UFSF Section";
+				description="Корпус Спец. Назначения Объединенных сил — сводная многонациональная группа спец. войск, расквартированная совместно с регулярными войсками, для проведения операций в тылу противника.";
+				texture="\mas_ukl_lite\flags\b_sof.paa";
+				
+				class JTF: BaseWest {
+					id=1;
+					idType=0;
+					textShort="JTF-2";
+					commander="";
+					text="JTF-2";
+					type="Recon";
+					size="Platoon";
+					description="";
+				}; 
+				
+				class KSK: BaseWest {
+					id=1;
+					idType=0;
+					textShort="KSK";
+					text="KSK";
+					type="Recon";
+					size="Platoon";
+					description="";
+				}; 
+				
+				class DEVGRU: BaseWest {
+					id=1;
+					idType=0;
+					textShort="DEVGRU";
+					text="DEVGRU";
+					type="Recon";
+					size="Platoon";
+					description="";
+				}; 
+				class SAS: BaseWest {
+					id=1;
+					idType=0;
+					textShort="SAS";
+					text="SAS";
+					type="Recon";
+					size="Platoon";
+					description="";
+				};
+			};
+		};
+		
+		class B_1st_HQ: BaseWest {
+			id=1;
+			idType=0;
+			textShort="1st HQ";
+			commander="Wocker";
+			commanderRank="Lieutenant";
+			text="1st Division HQ";
+			type="HQ";
+			size="Platoon";
+			description="";
+			
+			class 1st_Division : BaseWest {
+				id = 1;
+				type = "MechanizedInfantry";
+				size = "Platoon";
+				side = "West";
+				commander = "";
+				tags[] = {"BLUFOR", "USArmy","Kerry"};
+				text="1st Cavalry Division";
+				textShort="1st Division";
+				description="1-я кавалерийская дивизия — танковая дивизия Армии США, обеспечивающая огневую поддержку пехотным частям.";
+				
+				class Academy: BaseWest {
+					id=1;
+					idType=0;
+					textShort="Учебный %3";
+					commander="Nelfi";
+					commanderRank="Sergeant";
+					text="Учебный %3";
+					type="Infantry";
+					size="Corps";
+					description="Учебный корпус Объединенных сил — подразделение, созданное для подготовки новобранцев к распределению по подразделениям и ТВД, где в данный момент идут активные боевые действия. Приписано к 1-ой Кавалерийской дивизии.";
+					
+					class PT: BaseWest {
+						id=1;
+						idType=0;
+						textShort="%1 %3";
+						commander="";
+						commanderRank="";
+						text="%1 %3";
+						type="Infantry";
+						size="Platoon";
+						description="";
+					};
+				};
+				
+				class Tank_1: BaseWest{id=1;idType=0;textShort="%1 танк. %3";text="%1 танковый %3";commander="";type="Armored";size="Platoon";};
+				class Inf_2: BaseWest{id=1;idType=0;textShort="%1 пех. %3";text="%1 пехотный %3";commander="";type="Infantry";size="Platoon";};
+				class Inf_3: BaseWest{id=2;idType=0;textShort="%1 пех. %3";text="%1 пехотный %3";commander="";type="Infantry";size="Platoon";};
+				
+			}; 
+		};
+		
+		class B_75th_HQ: BaseWest {
+			id=75;
+			idType=0;
+			textShort="75th HQ";
+			commander="Osiris";
+			commanderRank="Lieutenant";
+			text="75th Ranger Regiment HQ";
+			type="HQ";
+			size="Platoon";
+			description="";
+			
+			class 75th_Platoon : BaseWest {
+				id = 1;
+				type = "Recon";
+				size = "Platoon";
+				side = "West";
+				commander = "";
+				tags[] = {"BLUFOR", "USArmy","Kerry"};
+				text="75th Ranger Regiment";
+				textShort="75th Regiment";
+				description="75ый полк рейнджеров — парашютно-десантный полк сил специального назначения. Полк предназначен для выполнения боевых задач специального назначения, включая разведку и диверсии в тылах противника, захват аэродромов, разведку в интересах продвигающихся частей Сухопутных войск.";
+				
+				class A_1: BaseWest {
+					id=1;
+					commander="";
+					idType=0;
+					text = "%1 %3";
+					textShort = "%1 %3";
+					description="";
+					type = "Recon";
+					size = "Platoon";
+				};
+				
+				class A_2:A_1{id=2;};
+				class A_3:A_1{id=3;};
+				class A_4:A_1{id=4;};
+					
+			}; 
+		};
+		
+		class B_USAF_HQ: BaseWest
+		{
+			id=1;
+			textShort="USAF HQ";
+			commander="Wallcroft";
+			commanderRank="Sergeant";
+			text="USAF";
+			type="HQ";
+			size="Company";
+			description="";
+			class 420th_USAF : BaseWest {
+			    commander="";
+				id = 1;
+				type = "Helicopter";
+				size = "Platoon";
+				side = "West";
+				tags[] = {"BLUFOR", "USArmy","Kerry"};
+				textShort="420th USAF";
+				text="420th USAF";
+				description="420-ая Специальная Тактическая эскадрилья — подразделение ВВС США, приписанное к Южному Блоку Объединенных сил, для оказания воздушной поддержки, нанесения стратегических и тактических ударов, а так же снабжения наземных частей во время боевых действий в труднодоступной местности.";
+				
+				class USAF_CombatAircraft: BaseWest {
+					commander="Flammeus";
+					commanderRank="Sergeant";
+					text="Combat Aircrafts";
+					textShort="CA";
+					type="Fighter";
+					size="Squadron";
+					description="";
+				};
+				class USAF_CombatHeli: USAF_CombatAircraft {
+					commander="Viper";
+					commanderRank="Corporal";
+					text="Combat Helicopters";
+					textShort="CH";
+					type="Helicopter";
+				};
+				class USAF_GF: USAF_CombatAircraft {
+					commander="";
+					commanderRank="";
+					text="Ground Forces";
+					textShort="GF";
+					type="Support";
+					
+					class CCT: USAF_CombatAircraft {
+						commander="";
+						commanderRank="";
+						text="Combat Controle Team";
+						textShort="CCT";
+						type="UAV";
+						size = 1;
+					};
+					
+					class PJ: CCT {
+						text="Pararescue Jumpers Team";
+						textShort="PJT";
+						type="Support";
+					};
+				};
+			};
+			
+			
+		};
+    class BaseWestGuer
+        {
+            side="West";
+            commander="GreekMen";
+            subordinates[]={};
+        };
+		class B_Greek: BaseWestGuer
+		{
+			text="Гарнизон острова Алтис";
+			textShort="Командование гарнизона и сил правопорядка";
+			texture="\a3\missions_f_epa\data\img\orbat\b_aegis_ca.paa";
+			color[]={0,0,0,1};
+			insignia="\a3\missions_f_epa\data\img\orbat\b_aegis_texture_ca.paa";
+			// colorInsignia[]={0,0,0,1};
+			commander="Костулас";
+			commanderRank="Colonel";
+			description="Греческий гарнизон острова Алтис - сводная группировка ВС Греции и силовых структур, задействованных на подавлении беспорядков в регионе, а также удержании ключевых объектов инфраструктуры. Штаб базируется в городе Пиргос.";
+			subordinates[]=
+			{
+				"B_Greek_HQ"
+			};
+		
+		
+		};
+		
+		class B_Greek_HQ: BaseWestGuer {
+			id=1;
+			idType=0;
+			textShort="UTG HQ";
+			commander="";
+			text="United Task Group HQ";
+			type="HQ";
+			size="Section";
+			subordinates[]=
+			{
+				"North_Section",
+				"South_Section",
+				"East_Section",
+				"West_Section",
+				"Fleet"
+			};
+			
+		};
+			
+			
+		    class North_Section : BaseWestGuer {
+				id = 1;
+				type = "Infantry";
+				size = "Platoon";
+				side = "West";
+				commander = "";
+				tags[] = {"BLUFOR", "USArmy","Kerry"};
+				text="Tactical Group ""North""";
+				textShort="TG ""North""";
+				description="Тактическая группа ""Север"", базирующаяся в городе София.";
+				
+				class A_1: BaseWestGuer {
+					id=1;
+					commander="";
+					idType=0;
+					text = "%1 %3";
+					textShort = "%1 %3";
+					description="";
+					type = "Recon";
+					size = "Platoon";
+				};
+				
+				class A_2:A_1{id=2;};
+				class A_3:A_1{id=3;};
+				class A_4:A_1{id=4;};
+			};
+			
+			class South_Section : BaseWestGuer {
+				id = 1;
+				type = "Infantry";
+				size = "Platoon";
+				side = "West";
+				commander = "";
+				tags[] = {"BLUFOR", "USArmy","Kerry"};
+				text="Tactical Group ""South""";
+				textShort="TG ""South""";
+				description="Тактическая группа ""Юг"", базирующаяся в городе Панагия. В основном собрана из отрядов ополчения и полиции";
+				
+				class B_1: BaseWestGuer {
+					id=1;
+					commander="";
+					idType=0;
+					text = "%1 %3";
+					textShort = "%1 %3";
+					description="";
+					type = "Recon";
+					size = "Platoon";
+				};
+				
+				class B_2:B_1{id=2;};
+				class B_3:B_1{id=3;};
+				class B_4:B_1{id=4;};
+			};
+			
+			class East_Section : BaseWestGuer {
+				id = 1;
+				type = "Infantry";
+				size = "Platoon";
+				side = "West";
+				commander = "";
+				tags[] = {"BLUFOR", "USArmy","Kerry"};
+				text="Tactical Group ""East""";
+				textShort="TG ""East""";
+				description="Тактическая группа ""Восток"", базирующаяся в городе Парос.";
+				
+				class C_1: BaseWestGuer {
+					id=1;
+					commander="";
+					idType=0;
+					text = "%1 %3";
+					textShort = "%1 %3";
+					description="";
+					type = "Recon";
+					size = "Platoon";
+				};
+				
+				class C_2:C_1{id=2;};
+				class C_3:C_1{id=3;};
+				class C_4:C_1{id=4;};
+			};
+			
+			class West_Section : BaseWestGuer {
+				id = 1;
+				type = "Infantry";
+				size = "Platoon";
+				side = "West";
+				commander = "";
+				tags[] = {"BLUFOR", "USArmy","Kerry"};
+				text="Tactical Group ""West""";
+				textShort="TG ""West""";
+				description="Тактическая группа ""Запад"", базирующаяся в городе Айос-Дионисиос.";
+				
+				class D_1: BaseWestGuer {
+					id=1;
+					commander="";
+					idType=0;
+					text = "%1 %3";
+					textShort = "%1 %3";
+					description="";
+					type = "Recon";
+					size = "Platoon";
+				};
+				
+				class D_2:D_1{id=2;};
+				class D_3:D_1{id=3;};
+				class D_4:D_1{id=4;};
+			};
+			
+			class Fleet : BaseWestGuer {
+				id = 1;
+				type = "Maritime";
+				size = "Platoon";
+				side = "West";
+				commander = "";
+				tags[] = {"BLUFOR", "USArmy","Kerry"};
+				text="Navy Group ""Alpha""";
+				textShort="NG ""Alpha""";
+				description="Флотская группа ""Альфа"", базирующаяся в Кавале.";
+			};	
+	};		
