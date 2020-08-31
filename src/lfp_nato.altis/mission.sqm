@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1504;
+		nextID=1505;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=42;
+		nextID=48;
 	};
 	class Camera
 	{
-		pos[]={15236.442,159.33611,17461.873};
-		dir[]={-0.19141006,-0.70357752,-0.68453276};
-		up[]={-0.18948175,0.71051961,-0.67762744};
-		aside[]={-0.963153,-1.4026155e-006,0.26931626};
+		pos[]={15292.277,40.675808,17439.375};
+		dir[]={-0.43625394,-0.46576825,-0.76991206};
+		up[]={-0.22971156,0.88480574,-0.40539902};
+		aside[]={-0.87004685,-9.8085729e-007,0.49299499};
 	};
 };
 binarizationWanted=0;
@@ -38,13 +38,13 @@ addons[]=
 	"rhsusf_c_HEMTT_A4",
 	"CUP_WheeledVehicles_MTVR",
 	"A3_Structures_F_Mil_Flags",
-	"A3_Structures_F_Civ_InfoBoards",
 	"mas_can_add_FlagCarriers",
 	"bwa3_common",
 	"A3_Structures_F_Civ_Dead",
 	"USAF_C17_C",
 	"A3_Props_F_Orange_Humanitarian_Camps",
 	"A3_Structures_F_Mil_Fortification",
+	"A3_Structures_F_Civ_InfoBoards",
 	"CUP_WarfareBuildings",
 	"CUP_StandaloneTerrains_Core_Faction",
 	"CUP_Editor_A2_Roads_Config",
@@ -119,13 +119,14 @@ addons[]=
 	"A3_Ui_F",
 	"A3_Structures_F_Training",
 	"CUP_AirVehicles_AmbientPlanes",
-	"CUP_WheeledVehicles_Stryker"
+	"CUP_WheeledVehicles_Stryker",
+	"A3_Supplies_F_Heli_Slingload"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=74;
+		items=75;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -583,6 +584,13 @@ class AddonsMetaData
 		{
 			className="CUP_WheeledVehicles_Stryker";
 			name="CUP_WheeledVehicles_Stryker";
+		};
+		class Item74
+		{
+			className="A3_Supplies_F_Heli";
+			name="Arma 3 Helicopters - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -22997,7 +23005,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=471;
+		items=472;
 		class Item0
 		{
 			dataType="Logic";
@@ -23844,55 +23852,12 @@ class Mission
 				{
 					dataType="Layer";
 					name="Слой 42";
-					state=2;
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15243.211,18.587582,17451.432};
-								angles[]={0.0039968039,5.4105206,0.020001473};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-							};
-							id=562;
-							type="Land_MapBoard_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectTextureCustom0";
-									expression="_this setObjectTextureGlobal [0,_value]";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="\stp_uh1h\stand_co.paa";
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-					};
 					id=1503;
+					atlOffset=185.97;
 				};
 			};
 			id=528;
-			atlOffset=0.18925285;
+			atlOffset=134.80576;
 		};
 		class Item14
 		{
@@ -24808,7 +24773,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15312.824,21.417175,17402.613};
+				position[]={15312.315,21.49489,17402.633};
 			};
 			side="Empty";
 			flags=5;
@@ -24817,7 +24782,6 @@ class Mission
 			};
 			id=576;
 			type="Flag_RedCrystal_F";
-			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -58609,6 +58573,66 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item471
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15315.136,18.781885,17400.283};
+				angles[]={0.016004669,2.3657763,6.2591867};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this addAction [""Получить медицину"",{[] execVM 'MED.sqf';},"""",1,false,false,"""",""player distance _target < 3""];}";
+				disableSimulation=1;
+			};
+			id=1504;
+			type="B_Slingload_01_Medevac_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};
