@@ -48,6 +48,9 @@ force ace_cookoff_probabilityCoef = 0;
 force ace_respawn_removeDeadBodiesDisconnected = true;
 force ace_respawn_savePreDeathGear = true;
 
+// ACE Гранаты
+force ace_grenades_convertExplosives = true;
+
 // ACE Групповое вооружение (CSW)
 force ace_csw_ammoHandling = 0;
 force ace_csw_defaultAssemblyMode = false;
@@ -56,11 +59,15 @@ force ace_csw_handleExtraMagazines = false;
 force ace_csw_progressBarTimeCoefficent = 1;
 
 // ACE Жесты на карте
+ace_map_gestures_allowCurator = true;
+ace_map_gestures_allowSpectator = true;
+ace_map_gestures_briefingMode = 0;
 ace_map_gestures_defaultColor = [1,0.88,0,0.7];
 ace_map_gestures_defaultLeadColor = [1,0.88,0,0.95];
 force ace_map_gestures_enabled = true;
 force ace_map_gestures_interval = 1;
 force ace_map_gestures_maxRange = 10;
+force ace_map_gestures_maxRangeCamera = 14;
 ace_map_gestures_nameTextColor = [0.2,0.2,0.2,0.3];
 force ace_map_gestures_onlyShowFriendlys = false;
 
@@ -174,7 +181,7 @@ force ace_repair_repairDamageThreshold_engineer = 0.5;
 force ace_repair_wheelRepairRequiredItems = ["ToolKit"];
 
 // ACE Медицина
-force ace_medical_ai_enabledFor = 0;
+force ace_medical_ai_enabledFor = 2;
 force ace_medical_AIDamageThreshold = 0.5;
 force ace_medical_bleedingCoefficient = 0.3;
 force ace_medical_blood_bloodLifetime = 60;
@@ -212,7 +219,7 @@ force ace_medical_treatment_clearTraumaAfterBandage = false;
 force ace_medical_treatment_consumePAK = 0;
 force ace_medical_treatment_consumeSurgicalKit = 0;
 force ace_medical_treatment_convertItems = 0;
-force ace_medical_treatment_cprSuccessChance = 0.7;
+force ace_medical_treatment_cprSuccessChance = 0.601182;
 force ace_medical_treatment_holsterRequired = 0;
 force ace_medical_treatment_litterCleanupDelay = 1;
 force ace_medical_treatment_locationEpinephrine = 0;
@@ -385,7 +392,7 @@ force ace_frag_spallEnabled = false;
 force ace_hearing_autoAddEarplugsToUnits = true;
 force ace_hearing_disableEarRinging = true;
 force ace_hearing_earplugsVolume = 0.4;
-force ace_hearing_enableCombatDeafness = false;
+force ace_hearing_enableCombatDeafness = true;
 force ace_hearing_enabledForZeusUnits = true;
 force ace_hearing_unconsciousnessVolume = 0.3;
 
@@ -412,6 +419,12 @@ CHTR_TFAR_Setter_Layout = false;
 CHTR_TFAR_Setter_Shortcut = false;
 CHTR_TFAR_Setter_ShowLR = true;
 CHTR_TFAR_Setter_ShowSR = true;
+
+// ACE Trenches
+force ace_trenches_bigEnvelopeDigDuration = 25;
+force ace_trenches_bigEnvelopeRemoveDuration = 15;
+force ace_trenches_smallEnvelopeDigDuration = 20;
+force ace_trenches_smallEnvelopeRemoveDuration = 12;
 
 // ACE Uncategorized
 force ace_fastroping_requireRopeItems = false;
