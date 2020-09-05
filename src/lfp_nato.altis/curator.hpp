@@ -24,5 +24,6 @@ class Curators
 		,"76561198249001660"//Hornet (Event)
 		,"76561198295847201"//Mosquito (Event)
 		,"76561198819085114"//Mark(Event)
+		,"76561198150488400"//Monk (Event)
 };
 };
