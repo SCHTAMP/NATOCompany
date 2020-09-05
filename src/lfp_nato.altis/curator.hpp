@@ -21,8 +21,8 @@ class Curators
 		,"76561198173172722"//Galentine (Event)
 		,"76561198160051880"//Jager (Event)
 	    ,"76561198328556853"//Nikindor (Event)
-		,"76561198046918009"//Mahan (Event)
 		,"76561198249001660"//Hornet (Event)
 		,"76561198295847201"//Mosquito (Event)
+		,"76561198819085114"//Mark(Event)
 };
 };
