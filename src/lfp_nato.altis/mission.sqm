@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=2038;
+		nextID=2039;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=72;
+		nextID=75;
 	};
 	class Camera
 	{
-		pos[]={15294.744,57.437035,17445.291};
-		dir[]={0.49139303,-0.77977985,0.38819245};
-		up[]={0.61191171,0.62598431,0.4833999};
-		aside[]={0.61995786,1.2489036e-006,-0.78477132};
+		pos[]={15334.623,30.008009,17431.84};
+		dir[]={-0.19114999,-0.36403537,0.91168094};
+		up[]={-0.074733779,0.93130642,0.35643864};
+		aside[]={0.97882634,1.679975e-006,0.20522983};
 	};
 };
 binarizationWanted=0;
@@ -23028,7 +23028,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=755;
+		items=756;
 		class Item0
 		{
 			dataType="Logic";
@@ -64269,6 +64269,97 @@ class Mission
 			{
 			};
 			id=2035;
+		};
+		class Item755
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={37081.207,-0.040008545,20169.697};
+			};
+			id=2038;
+			type="acex_fortify_setupModule";
+			atlOffset=185.84;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acex_fortify_setupModule_AddToolItem";
+					expression="_this setVariable ['AddToolItem',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acex_fortify_setupModule_Budget";
+					expression="_this setVariable ['Budget',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=350;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acex_fortify_setupModule_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acex_fortify_setupModule_Preset";
+					expression="_this setVariable ['Preset',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="small";
+						};
+					};
+				};
+				nAttributes=4;
+			};
 		};
 	};
 	class Connections
