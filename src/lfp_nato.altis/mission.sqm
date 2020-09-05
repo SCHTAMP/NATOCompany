@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={15334.623,30.008009,17431.84};
-		dir[]={-0.19114999,-0.36403537,0.91168094};
-		up[]={-0.074733779,0.93130642,0.35643864};
-		aside[]={0.97882634,1.679975e-006,0.20522983};
+		dir[]={-0.33297458,-0.56342727,-0.75624269};
+		up[]={-0.22708727,0.82607114,-0.51575458};
+		aside[]={-0.91531485,1.1734664e-006,0.40301222};
 	};
 };
 binarizationWanted=0;
@@ -23028,7 +23028,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=756;
+		items=755;
 		class Item0
 		{
 			dataType="Logic";
@@ -64269,97 +64269,6 @@ class Mission
 			{
 			};
 			id=2035;
-		};
-		class Item755
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={37081.207,-0.040008545,20169.697};
-			};
-			id=2038;
-			type="acex_fortify_setupModule";
-			atlOffset=185.84;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="acex_fortify_setupModule_AddToolItem";
-					expression="_this setVariable ['AddToolItem',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="acex_fortify_setupModule_Budget";
-					expression="_this setVariable ['Budget',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=350;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="acex_fortify_setupModule_Side";
-					expression="_this setVariable ['Side',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="acex_fortify_setupModule_Preset";
-					expression="_this setVariable ['Preset',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="small";
-						};
-					};
-				};
-				nAttributes=4;
-			};
 		};
 	};
 	class Connections
