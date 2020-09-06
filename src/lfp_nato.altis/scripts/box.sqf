@@ -2,7 +2,7 @@ params ["_target", "_caller", "_actionId", "_arguments"];
 
 diag_log format ["%1", [_target, _caller, _actionId, _arguments]];
 
-_arguments params ["_type", ["_offset", 3]];
+_arguments params ["_type", ["_offset", 3], ["_rotation", 0, [0]]];
 
 // ["ACE_epinephrine","ACE_tourniquet","ACE_bloodIV","ACE_bloodIV_250","ACE_bloodIV_500","ACE_fieldDressing","ACE_packingBandage","ACE_splint","ACE_elasticBandage","ACE_bodyBag","ACE_morphine"]
 
@@ -16,12 +16,12 @@ if (isNil "_type") exitWith {
 };
 
 
-BOXES = ["C_IDAP_supplyCrate_F", "B_supplyCrate_F"];
+BOXES = ["C_IDAP_supplyCrate_F", "B_supplyCrate_F", "ACE_medicalSupplyCrate_advanced"];
 
 private _spawn_medic = {
-	params["_spawnPoint"];
+	params["_spawnPoint", ["_BType", 0], ["_mult", 1] ];
 
-	_classname = BOXES select 0;
+	_classname = BOXES select _BType;
 	_obj = createVehicle [_classname,_spawnPoint,[],1];
 
 // CLEAR
@@ -30,19 +30,26 @@ private _spawn_medic = {
 	clearItemCargoGlobal _obj;
 	clearBackpackCargoGlobal _obj;
 //
+	_toAdd = [
+		["ACE_epinephrine", 70],
+		["ACE_morphine", 70],
+		["ACE_splint", 50],
+		["ACE_tourniquet", 50],
+		["ACE_bloodIV", 30],
+		["ACE_bloodIV_250", 40],
+		["ACE_bloodIV_500", 50],
+		["ACE_fieldDressing", 100],
+		["ACE_packingBandage", 100],
+		["ACE_elasticBandage", 100],
+		["ACE_bodyBag", 40]
+	];
 
+	
+	{
+		_obj addItemCargoGlobal [_x select 0, (_x select 1) / _mult]; 
+	} forEach _toAdd;
 
-	_obj addItemCargoGlobal ["ACE_epinephrine", 70];
-	_obj addItemCargoGlobal ["ACE_morphine", 70];
-	_obj addItemCargoGlobal ["ACE_splint", 50];
-	_obj addItemCargoGlobal ["ACE_tourniquet", 50];
-	_obj addItemCargoGlobal ["ACE_bloodIV", 30];
-	_obj addItemCargoGlobal ["ACE_bloodIV_250", 40];
-	_obj addItemCargoGlobal ["ACE_bloodIV_500", 50];
-	_obj addItemCargoGlobal ["ACE_fieldDressing", 100];
-	_obj addItemCargoGlobal ["ACE_packingBandage", 100];
-	_obj addItemCargoGlobal ["ACE_elasticBandage", 100];
-	_obj addItemCargoGlobal ["ACE_bodyBag", 40];
+	_obj setVariable ["ace_dragging_ignoreWeightCarry", true, true];
 };
 
 private _spawn_ammo = {
@@ -69,7 +76,7 @@ private _isBusy = {
 	_sp
 };
 
-_pos = _target getpos [_offset, (getDir _target - 90)];
+_pos = _target getpos [_offset, (getDir _target + _rotation)];
 _pos = [_pos] call _isBusy;
 
 diag_log format ["%1", _pos];
@@ -79,6 +86,9 @@ if !(_pos select 0) exitWith {[_caller, "Spawn Position is busy."] call _SendToC
 switch (_type) do {
 	case ("medic"): {
 		[_pos select 1] call _spawn_medic;
+	};
+	case ("medic_small"): {
+		[_pos select 1, 2, 2] call _spawn_medic;
 	};
 	default {
 		false;

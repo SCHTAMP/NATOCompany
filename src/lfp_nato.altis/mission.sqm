@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=2058;
+		nextID=2062;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=81;
+		nextID=84;
 	};
 	class Camera
 	{
-		pos[]={15399.877,63.102024,17412.174};
-		dir[]={-0.64971191,-0.73309517,-0.20173392};
-		up[]={-0.70019275,0.68001705,-0.2174091};
-		aside[]={-0.29656756,2.6072667e-007,0.95512831};
+		pos[]={15211.2,61.811592,17301.77};
+		dir[]={0.24183916,-0.91793442,0.31490391};
+		up[]={0.55908513,0.39674258,0.72799784};
+		aside[]={0.79319811,-1.2292294e-006,-0.60915393};
 	};
 };
 binarizationWanted=0;
@@ -23028,7 +23028,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=759;
+		items=760;
 		class Item0
 		{
 			dataType="Logic";
@@ -37861,7 +37861,6 @@ class Mission
 					{
 						rank="CAPTAIN";
 						description="NATO";
-						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -64601,6 +64600,99 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item759
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15219.313,17.984121,17310.248};
+						angles[]={0,3.9957044,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="call{this disableAI ""All"";" \n "" \n "this addAction " \n "[ " \n " ""Spawn Box (Small)"", " \n " { " \n "  _this execVM ""scripts\box.sqf""; " \n " }, " \n " [""medic_small"", 3], " \n " 1.5, " \n " false, " \n " false, " \n " """", " \n " ""'[USAF]' in name player"", " \n " 10, " \n " false, " \n " """", " \n " """" " \n "];" \n "" \n "" \n "this addAction " \n "[ " \n " ""Spawn Box"", " \n " { " \n "  _this execVM ""scripts\box.sqf""; " \n " }, " \n " [""medic"", 3], " \n " 1.5, " \n " false, " \n " false, " \n " """", " \n " ""'[USAF]' in name player"", " \n " 10, " \n " false, " \n " """", " \n " """" " \n "];}";
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+					};
+					id=2058;
+					type="B_RangeMaster_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2059;
 		};
 	};
 	class Connections
