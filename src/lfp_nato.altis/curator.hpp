@@ -15,7 +15,6 @@ class Curators
         ,"76561198106806701"//Archangel (Event)
         ,"76561198115713057"//Horn   (Event)
 		,"76561198159515401"//Prus (Event)
-        ,"76561198247446122"//Matria (Event)
         ,"76561198044799547"//Glyba (Event)
 		,"76561198194246470"//Zeus (Event)
 		,"76561198173172722"//Galentine (Event)
