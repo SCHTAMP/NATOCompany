@@ -9,7 +9,7 @@ ace_arsenal_fontHeight = 4.5;
 
 // ACE Артиллерия
 force ace_artillerytables_advancedCorrections = false;
-force ace_artillerytables_disableArtilleryComputer = false;
+force ace_artillerytables_disableArtilleryComputer = true;
 force ace_mk6mortar_airResistanceEnabled = false;
 force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = true;
@@ -746,6 +746,22 @@ cba_optics_usePipOptics = false;
 
 // CUP
 CUP_Vehicles_PreventBarrelClip = true;
+
+// dzn MG Tripod
+force dzn_MG_Tripod_DeployedAimCoef = 0.1;
+force dzn_MG_Tripod_DeployedRecoilCoef = 0.1;
+force dzn_MG_Tripod_Enabled = true;
+dzn_MG_Tripod_Enabled_CrouchGesture = true;
+dzn_MG_Tripod_Enabled_ProneGesture = true;
+dzn_MG_Tripod_Enabled_StandGesture = true;
+force dzn_MG_Tripod_FallbackToUniversal = false;
+
+// dzn Rifle Tripod
+dzn_Rifle_Tripod_AllowedBipods = "";
+dzn_Rifle_Tripod_AllowForAllBipods = true;
+dzn_Rifle_Tripod_DeployedAimCoef = 0.1;
+dzn_Rifle_Tripod_EnableAimCoef = true;
+dzn_Rifle_Tripod_Enabled = true;
 
 // GRAD окопы
 force grad_trenches_functions_allowBigEnvelope = false;
